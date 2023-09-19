@@ -1,3 +1,5 @@
+# 由于本人不再使用此设备，所以不再维护
+
 # Linksys WRT1900ACS V2 固件
 
 [![](https://img.shields.io/github/last-commit/coolsnowwolf/lede/master?label=%E6%BA%90%E7%A0%81%E6%9B%B4%E6%96%B0)](https://github.com/coolsnowwolf/lede)
