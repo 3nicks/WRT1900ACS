@@ -30,7 +30,11 @@ sed -i 's/or "1"%>/or "1"%> ( <%=luci.sys.exec("expr `cat \/sys\/class\/thermal\
 mkdir package/community
 pushd package/community
 
+# 网络设置向导
+git clone https://github.com/sirpdboy/luci-app-netwizard package/luci-app-netwizard
 
+# autosamba自动共享
+git clone https://github.com/sirpdboy/autosamba package/autosamba
 # Add Lienol's Packages
 git clone --depth=1 https://github.com/Lienol/openwrt-package -b other .
 git clone --depth=1 https://github.com/Lienol/openwrt-package
