@@ -11,10 +11,10 @@
 #
 
 # 修改openwrt登陆地址,把下面的 192.168.10.1 修改成你想要的就可以了
-sed -i 's/192.168.1.1/192.168.10.1/g' package/base-files/files/bin/config_generate
+sed -i 's/192.168.1.1/192.168.1.1/g' package/base-files/files/bin/config_generate
 
 # 修改主机名字，把 DracoOpenWrt 修改你喜欢的就行（不能纯数字或者使用中文）
-sed -i 's/OpenWrt/DracoOpenWrt/g' package/base-files/files/bin/config_generate
+# sed -i 's/OpenWrt/DracoOpenWrt/g' package/base-files/files/bin/config_generate
 
 # Modify default theme（FROM uci-theme-bootstrap CHANGE TO luci-theme-argon）
 sed -i 's/luci-theme-bootstrap/luci-theme-argon/g' ./feeds/luci/collections/luci/Makefile
@@ -24,7 +24,7 @@ sed -i 's|pcdata(boardinfo.system or "?")|luci.sys.exec("uname -m") or "?"|g' fe
 sed -i 's/or "1"%>/or "1"%> ( <%=luci.sys.exec("expr `cat \/sys\/class\/thermal\/thermal_zone0\/temp` \/ 1000") or "?"%> \&#8451; ) /g' feeds/luci/modules/luci-mod-admin-full/luasrc/view/admin_status/index.htm
 
 # Add OpenClash
-git clone --depth=1 -b master https://github.com/vernesong/OpenClash
+# git clone --depth=1 -b master https://github.com/vernesong/OpenClash
 
 # Clone community packages to package/community
 mkdir package/community
@@ -40,8 +40,8 @@ rm -rf ../lean/luci-app-kodexplorer
 git clone --depth=1 https://github.com/kenzok8/openwrt-packages
 
 # Add luci-app-vssr <M>
-git clone --depth=1 https://github.com/jerrykuku/lua-maxminddb.git
-git clone --depth=1 https://github.com/jerrykuku/luci-app-vssr
+# git clone --depth=1 https://github.com/jerrykuku/lua-maxminddb.git
+# git clone --depth=1 https://github.com/jerrykuku/luci-app-vssr
 
 # Add luci-proto-minieap
 git clone --depth=1 https://github.com/ysc3839/luci-proto-minieap
@@ -50,7 +50,7 @@ git clone --depth=1 https://github.com/ysc3839/luci-proto-minieap
 git clone --depth=1 https://github.com/tty228/luci-app-serverchan
 
 # Add luci-app-onliner
-git clone --depth=1 https://github.com/rufengsuixing/luci-app-onliner
+# git clone --depth=1 https://github.com/rufengsuixing/luci-app-onliner
 
 # Add luci-app-diskman
 git clone --depth=1 https://github.com/SuLingGG/luci-app-diskman
@@ -64,7 +64,7 @@ git clone --depth=1 https://github.com/lisaac/luci-lib-docker
 
 # Add luci-theme-argon
 git clone --depth=1 -b 18.06 https://github.com/jerrykuku/luci-theme-argon
-git clone --depth=1 https://github.com/jerrykuku/luci-app-argon-config
+# git clone --depth=1 https://github.com/jerrykuku/luci-app-argon-config
 rm -rf ../lean/luci-theme-argon
 rm -rf ../lean/luci-theme-bootstrap
 
